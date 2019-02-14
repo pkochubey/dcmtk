@@ -3113,6 +3113,7 @@ DcmDirectoryRecord *DicomDirInterface::buildSeriesRecord(DcmDirectoryRecord *rec
             /* copy attribute values from dataset to series record */
             copyElementType1(dataset, DCM_Modality, record, sourceFilename);
             copyElementType1(dataset, DCM_SeriesInstanceUID, record, sourceFilename);
+            copyElementType1(dataset, DCM_SeriesDescription, record, sourceFilename);
             /* use type 1C instead of 1 in order to avoid unwanted overwriting */
             copyElementType1C(dataset, DCM_SeriesNumber, record, sourceFilename);
             if ((ApplicationProfile == AP_GeneralPurposeDVDJPEG) ||
